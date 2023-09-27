@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Acceleration Plot</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div>
+        <canvas id="accelerationChart" width="800" height="400"></canvas>
+    </div>
+    <div>
+        <p>Movement X: <span id="movementX"></span></p>
+        <p>Movement Y: <span id="movementY"></span></p>
+        <p>Movement: <span id="movement"></span></p>
+        <p>Speed: <span id="speed"></span></p>
+        <p>Max Speed: <span id="maxSpeed"></span></p>
+        <p>Acceleration: <span id="acceleration"></span></p>
+        <p>Max Positive Acceleration: <span id="maxPositiveAcceleration"></span></p>
+        <p>Max Negative Acceleration: <span id="maxNegativeAcceleration"></span></p>
+    </div>
+    
+    <script>
+        var prevEvent, currentEvent;
+        var accelerationData = [];
+        var timeData = [];
+        var chart;
+        
+        document.documentElement.onmousemove = function (event) {
+            currentEvent = event;
+        }
+
+        var maxSpeed = 0,
+            prevSpeed = 0,
+            maxPositiveAcc = 0,
+            maxNegativeAcc = 0;
+
+        setInterval(function () {
+            if (prevEvent && currentEvent) {
+                var movementX = Math.abs(currentEvent.screenX - prevEvent.screenX);
+                var movementY = Math.abs(currentEvent.screenY - prevEvent.screenY);
+                var movement = Math.sqrt(movementX * movementX + movementY * movementY);
+
+                document.getElementById("movementX").innerText = movementX;
+                document.getElementById("movementY").innerText = movementY;
+                document.getElementById("movement").innerText = Math.round(movement);
+
+                // Speed = movement / 100ms = movement / 0.1s = 10 * movement / s
+                var speed = 10 * movement; // Current speed
+
+                document.getElementById("speed").innerText = Math.round(speed);
+                document.getElementById("maxSpeed").innerText = Math.round(
+                    speed > maxSpeed ? (maxSpeed = speed) : maxSpeed
+                );
+
+                var acceleration = 10 * (speed - prevSpeed);
+
+                document.getElementById("acceleration").innerText = Math.round(
+                    acceleration
+                );
+
+                if (acceleration > 0) {
+                    document.getElementById("maxPositiveAcceleration").innerText = Math.round(
+                        acceleration > maxPositiveAcc ? (maxPositiveAcc = acceleration) : maxPositiveAcc
+                    );
+                } else {
+                    document.getElementById("maxNegativeAcceleration").innerText = Math.round(
+                        acceleration < maxNegativeAcc ? (maxNegativeAcc = acceleration) : maxNegativeAcc
+                    );
+                }
+
+                // Push acceleration data and time to arrays for the chart
+                accelerationData.push(acceleration);
+                timeData.push(new Date().toLocaleTimeString());
+
+                // Update the chart
+                updateChart();
+            }
+
+            prevEvent = currentEvent;
+            prevSpeed = speed;
+        }, 100);
+
+        // Function to update the chart
+        function updateChart() {
+            if (!chart) {
+                // Initialize the chart
+                var ctx = document.getElementById("accelerationChart").getContext("2d");
+                chart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        datasets: [
+                            {
+                                label: null,
+                                data: accelerationData,
+                                borderColor: "blue",
+                                borderWidth: 2,
+                                fill: false,
+                                lineTension: 0.3,
+                            },
+                        ],
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                        },
+                        elements: {
+                            point:{
+                                radius: 0,
+                                backgroundColor: [
+                                    'blue',
+                                ]
+                            }
+                        },
+                        scales: {
+                            x: {
+                                ticks: {
+                                    display: false
+                                },
+                                grid: {
+                                    display: false,
+                                }
+                            },
+                            y: {
+                                ticks: {
+                                    display: false
+                                },
+                                grid: {
+                                    //display: false,
+                                    color: "rgba(100,100,100,0.1)",
+                                }
+                            }
+                        }
+                    }
+                });
+            } else {
+                // Update the existing chart with new data
+                chart.data.labels = timeData;
+                chart.data.datasets[0].data = accelerationData;
+                chart.update();
+            }
+        }
+    </script>
+</body>
+</html>
