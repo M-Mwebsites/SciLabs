@@ -14,6 +14,8 @@
     <div>
         <p>Speed X: <span id="speedX"></span></p>
         <p>Speed Y: <span id="speedY"></span></p>
+        <p>Acceleration X: <span id="accelerationX"></span></p>
+        <p>Acceleration Y: <span id="accelerationY"></span></p>
         <p>Max Speed X: <span id="maxSpeedX"></span></p>
         <p>Max Speed Y: <span id="maxSpeedY"></span></p>
     </div>
@@ -22,6 +24,8 @@
         var prevEvent, currentEvent;
         var speedXData = [];
         var speedYData = [];
+        var accelerationXData = [];
+        var accelerationYData = [];
         var timeData = [];
         var chart;
         
@@ -40,6 +44,12 @@
                 document.getElementById("speedX").innerText = Math.round(speedX);
                 document.getElementById("speedY").innerText = Math.round(speedY);
 
+                var accelerationX = speedX - (speedXData.length > 0 ? speedXData[speedXData.length - 1] : 0);
+                var accelerationY = speedY - (speedYData.length > 0 ? speedYData[speedYData.length - 1] : 0);
+
+                document.getElementById("accelerationX").innerText = Math.round(accelerationX);
+                document.getElementById("accelerationY").innerText = Math.round(accelerationY);
+
                 document.getElementById("maxSpeedX").innerText = Math.round(
                     speedX > maxSpeedX ? (maxSpeedX = speedX) : maxSpeedX
                 );
@@ -48,9 +58,11 @@
                     speedY > maxSpeedY ? (maxSpeedY = speedY) : maxSpeedY
                 );
 
-                // Push speed data and time to arrays for the chart
+                // Push speed and acceleration data, and time to arrays for the chart
                 speedXData.push(speedX);
                 speedYData.push(speedY);
+                accelerationXData.push(accelerationX);
+                accelerationYData.push(accelerationY);
                 timeData.push(new Date().toLocaleTimeString());
 
                 // Update the chart
@@ -86,6 +98,22 @@
                                 fill: false,
                                 lineTension: 0.3,
                             },
+                            {
+                                label: "Acceleration X",
+                                data: accelerationXData,
+                                borderColor: "green",
+                                borderWidth: 2,
+                                fill: false,
+                                lineTension: 0.3,
+                            },
+                            {
+                                label: "Acceleration Y",
+                                data: accelerationYData,
+                                borderColor: "yellow",
+                                borderWidth: 2,
+                                fill: false,
+                                lineTension: 0.3,
+                            },
                         ],
                     },
                     options: {
@@ -93,7 +121,7 @@
                         maintainAspectRatio: false,
                         plugins: {
                             legend: {
-                                display: false
+                                display: true,
                             },
                         },
                         elements: {
@@ -126,6 +154,8 @@
                 chart.data.labels = timeData;
                 chart.data.datasets[0].data = speedXData;
                 chart.data.datasets[1].data = speedYData;
+                chart.data.datasets[2].data = accelerationXData;
+                chart.data.datasets[3].data = accelerationYData;
                 chart.update();
             }
         }
