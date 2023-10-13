@@ -1,0 +1,277 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: white !important;
+    color: black;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.show {
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.hide {
+    opacity: 0;
+    transition: 0.4s;
+}
+
+#stars {
+    position: absolute;
+	display: block;
+    width: 100%;
+    height: 100vh;
+	z-index: 1;
+}
+
+
+.chart-wrapper {
+    position: fixed;
+    height: 500px;
+    width: 95vw;
+    display: flex;
+    z-index: -1;
+    top: 200px;
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    display: block;
+    background-color: white;
+}
+
+#speedChart {
+    display: block;
+    box-sizing: border-box;
+    height: 405px !important;
+    width: 100% !important;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+}
+
+#header .image {
+    padding-left: 10%;
+    align-self: center;
+}
+
+#header .image img {
+    width: 120px;
+    vertical-align: bottom;
+}
+
+.item a {
+    text-transform: uppercase;
+    color: #000 !important;
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: normal !important;
+}
+
+.menu {
+    padding-right: 10%;
+    align-self: center;
+}
+
+
+/*--------------------------------------------------------------
+# Title
+--------------------------------------------------------------*/
+
+#title {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 300px;
+    padding-bottom: 50px;
+    position: relative;
+    z-index: 2;
+    width: fit-content;
+    background: rgba(255,255,255,0.9);
+}
+
+#title div img {
+    width: 150px;
+}
+
+#title div h2 {
+    font-size: 50px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 992px) {
+    #title {
+        padding-top: 250px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #title div img {
+        width: 300px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Decorations
+--------------------------------------------------------------*/
+
+.square1 {
+    position: absolute;
+    right: 0;
+}
+
+.points1 {
+    position: absolute;
+    right: 0;
+    top: 355px;
+    width: 230px;
+}
+
+.square2 {
+    position: absolute;
+    top: 200px;
+}
+
+.points2 {
+    position: absolute;
+    top: 300px;
+    width: 200px;
+}
+
+
+@keyframes slowScroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+.points1,
+.square2 {
+    animation: slowScroll 5s linear infinite alternate;
+    z-index: 2;
+}
+
+.points2,
+.square1 {
+    animation: slowScroll 3s linear infinite alternate;
+    z-index: 2;
+}
+
+.dec2 {
+    position: relative;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 767px) {
+    .points1, .square2 {
+        display: none;
+    }
+    .points2 {
+        opacity: 0.1;
+    }
+    .square1 {
+        opacity: 0.5;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Mission
+--------------------------------------------------------------*/
+
+#mission {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 160px;
+    z-index: 3;
+    height: 200px;
+}
+
+#mission p {
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 992px) {
+    #mission {
+        padding-top: 100px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+#about {
+    padding-left: 10%;
+    padding-right: 14%;
+    display: flex;
+    padding-top: 220px;
+    justify-content: space-between;
+}
+
+#about h2 {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 300px;
+    margin-top: 0;
+}
+
+#about img {
+    width: 128px;
+    height: 8px;
+}
+
+#about video {
+    width: 648px;
+    height: auto;
+}
+
+@media only screen and (max-width: 992px) {
+    #about {
+        flex-direction: column;
+        gap: 40px;
+    }
+    #about video {
+        width: 100%;
+        height: auto;
+    }
+}
