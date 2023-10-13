@@ -6,10 +6,32 @@
     <title>Mouse Speed Plot</title>
     <!-- Include Chart.js library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .parent{
+            position: relative;
+            height: 500px;
+            width: 700px;
+            display: flex;
+            padding: 10px;
+            z-index: -1;
+            top: 60px;
+        }
+        .cover {
+            position: absolute;
+            height: 100%;
+            width: 50px;
+            display: block;
+            background-color: white;
+        }
+        canvas {
+            margin-right: 50px;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <canvas id="speedChart" width="800" height="400"></canvas>
+    <div class="parent">
+        <div class="cover"></div>
+        <canvas id="speedChart"></canvas>
     </div>
     <div>
         <p>Speed X: <span id="speedX"></span></p>
@@ -24,13 +46,19 @@
         var speedYData = [];
         var timeData = [];
         var chart;
-        
-        document.documentElement.onmousemove = function (event) {
+        var maxSpeedX = 0;
+        var maxSpeedY = 0;
+
+        // Handle both mouse and touch events
+        function handleInputEvent(event) {
             currentEvent = event;
         }
 
-        var maxSpeedX = 0,
-            maxSpeedY = 0;
+        document.documentElement.onmousemove = handleInputEvent;
+        document.documentElement.addEventListener('touchmove', function (event) {
+            event.preventDefault(); // Prevent scrolling on touch devices
+            handleInputEvent(event.touches[0]); // Use the first touch point
+        });
 
         setInterval(function () {
             if (prevEvent && currentEvent) {
@@ -48,6 +76,12 @@
                     speedY > maxSpeedY ? (maxSpeedY = speedY) : maxSpeedY
                 );
 
+                if (speedXData.length > 100) {
+                    speedXData.shift();
+                    speedYData.shift();
+                    timeData.shift();
+                }
+
                 // Push speed data and time to arrays for the chart
                 speedXData.push(speedX);
                 speedYData.push(speedY);
@@ -58,7 +92,7 @@
             }
 
             prevEvent = currentEvent;
-        }, 100);
+        }, 150);
 
         // Function to update the chart
         function updateChart() {
@@ -94,14 +128,14 @@
                     },
                     options: {
                         responsive: true,
-                        maintainAspectRatio: false,
+                        maintainAspectRatio: true,
                         plugins: {
                             legend: {
-                                display: false
+                                display: false,
                             },
                         },
                         elements: {
-                            point:{
+                            point: {
                                 radius: 0,
                             }
                         },
@@ -126,14 +160,13 @@
                                 },
                                 border: {
                                     display: false,
-                                    dash: [10,10]
+                                    dash: [10, 10]
                                 }
                             },
                         },
                     },
                 });
             } else {
-                // Update the existing chart with new data
                 chart.data.labels = timeData;
                 chart.data.datasets[0].data = speedXData;
                 chart.data.datasets[1].data = speedYData;
