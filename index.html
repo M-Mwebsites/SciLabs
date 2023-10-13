@@ -73,18 +73,22 @@
                             {
                                 label: "Speed X",
                                 data: speedXData,
-                                borderColor: "blue",
-                                borderWidth: 2,
+                                borderColor: "#f0bb74",
+                                borderWidth: 3,
                                 fill: false,
                                 lineTension: 0.3,
+                                fill: "start",
+                                backgroundColor: "rgba(240, 187, 116, 0.05)",
                             },
                             {
                                 label: "Speed Y",
                                 data: speedYData,
-                                borderColor: "red",
+                                borderColor: "#5990ff",
                                 borderWidth: 2,
                                 fill: false,
                                 lineTension: 0.3,
+                                fill: "start",
+                                backgroundColor: "rgba(89, 144, 255, 0.05)"
                             },
                         ],
                     },
@@ -98,7 +102,7 @@
                         },
                         elements: {
                             point:{
-                                radius: 2,
+                                radius: 0,
                             }
                         },
                         scales: {
@@ -109,14 +113,21 @@
                                 grid: {
                                     display: false,
                                 },
+                                border: {
+                                    display: false,
+                                }
                             },
                             y: {
                                 ticks: {
                                     display: false,
                                 },
                                 grid: {
-                                    color: "rgba(100,100,100,0.1)",
+                                    color: "#eaf9ff",
                                 },
+                                border: {
+                                    display: false,
+                                    dash: [10,10]
+                                }
                             },
                         },
                     },
