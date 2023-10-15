@@ -86,7 +86,7 @@
     let scrolled = false;
     if (selectHeader) {
         const headerScrolled = () => {
-            if (window.scrollY > 270) {
+            if (window.scrollY > 170) {
                 document.getElementById('logo-header').classList.add('show');
                 document.getElementById('logo-title-image').classList.add('hide');
                 document.getElementById('logo-header').classList.remove('hide');

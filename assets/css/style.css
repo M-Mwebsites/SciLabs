@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     background-color: white !important;
     color: black;
     margin-left: 0px;
@@ -20,28 +22,26 @@ body {
     transition: 0.4s;
 }
 
-#stars {
-    position: absolute;
-	display: block;
-    width: 100%;
-    height: 100vh;
-	z-index: 1;
+section {
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
 .chart-wrapper {
     position: fixed;
     height: 500px;
-    width: 95vw;
+    width: 106vw;
     display: flex;
     z-index: -1;
     top: 200px;
+    margin-left: -7vw;
 }
 
 .cover {
     position: absolute;
     height: 100%;
-    width: 50px;
+    width: 7vw;
     display: block;
     background-color: white;
 }
@@ -78,7 +78,7 @@ body {
     vertical-align: bottom;
 }
 
-.item a {
+#header .item a {
     text-transform: uppercase;
     color: #000 !important;
     font-size: 15px !important;
@@ -87,7 +87,7 @@ body {
     line-height: normal !important;
 }
 
-.menu {
+#header .menu {
     padding-right: 10%;
     align-self: center;
 }
@@ -98,14 +98,12 @@ body {
 --------------------------------------------------------------*/
 
 #title {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 300px;
-    padding-bottom: 50px;
+    padding-top: 200px;
+    padding-bottom: 100px;
     position: relative;
     z-index: 2;
     width: fit-content;
-    background: rgba(255,255,255,0.9);
+    background: linear-gradient(to right, rgba(255,255,255,0.7) 90%, transparent);
 }
 
 #title div img {
@@ -135,102 +133,103 @@ body {
 
 
 /*--------------------------------------------------------------
-# Decorations
+# Goals
 --------------------------------------------------------------*/
 
-.square1 {
-    position: absolute;
-    right: 0;
+#goals {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(255,255,255,0.7);
 }
 
-.points1 {
-    position: absolute;
-    right: 0;
-    top: 355px;
-    width: 230px;
+#goals .steps {
+    display: flex;
+    gap: 70px;
 }
 
-.square2 {
-    position: absolute;
-    top: 200px;
-}
-
-.points2 {
-    position: absolute;
-    top: 300px;
-    width: 200px;
+#goals .steps .step {
+    width: fit-content;
 }
 
 
-@keyframes slowScroll {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(10%);
-    }
+#goals .steps .step .number {
+    color: #DEDEDE;
+    font-size: 24px;
+    margin-bottom: 0;
+    padding-left: 8px;
 }
 
-.points1,
-.square2 {
-    animation: slowScroll 5s linear infinite alternate;
-    z-index: 2;
+#goals .steps .step .text {
+    color: #F0BB74;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 0 8px;
+    background-color: #f0f0f0;
 }
 
-.points2,
-.square1 {
-    animation: slowScroll 3s linear infinite alternate;
-    z-index: 2;
+#goals .description {
+    padding-left: 8px;
+    font-size: 18px;
+    width: 56vw;
 }
 
-.dec2 {
-    position: relative;
-    z-index: 2;
-}
 
-@media only screen and (max-width: 767px) {
-    .points1, .square2 {
-        display: none;
-    }
-    .points2 {
-        opacity: 0.1;
-    }
-    .square1 {
-        opacity: 0.5;
+@media only screen and (max-width: 992px) {
+    .steps {
+        flex-direction: column;
     }
 }
 
 
 /*--------------------------------------------------------------
-# Mission
+# Explain
 --------------------------------------------------------------*/
 
-#mission {
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-    max-width: 600px;
-    margin: 0 auto;
-    padding-top: 160px;
-    z-index: 3;
-    height: 200px;
+#explain {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(255,255,255,0.7);
 }
 
-#mission p {
-    text-align: center;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+#explain .title {
+    color: #80a6f0;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 0 8px;
+    background-color: #f0f0f0;
+    width: fit-content;
 }
 
-@media only screen and (max-width: 992px) {
-    #mission {
-        padding-top: 100px;
-    }
+#explain .row {
+    display: flex;
+    gap: 70px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+}
+
+#explain .row img {
+
+}
+
+#explain .row .item {
+    padding: 0;
+    height: fit-content;
+}
+
+#explain .row .title {
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+#explain .row .description {
+    margin: 0;
+    font-size: 17px;
+    width: 26vw;
 }
 
 

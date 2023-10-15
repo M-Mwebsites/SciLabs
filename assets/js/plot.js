@@ -1,7 +1,8 @@
-var prevEvent, currentEvent;
-var speedXData = [];
-var speedYData = [];
-var timeData = [];
+var prevEvent = { screenX: 0, screenY: 0 };
+var currentEvent = { screenX: 0, screenY: 0 };
+var speedXData = [0];
+var speedYData = [0];
+var timeData = [new Date().toLocaleTimeString()];
 var chart;
 var maxSpeedX = 0;
 var maxSpeedY = 0;
@@ -17,34 +18,31 @@ document.documentElement.addEventListener('touchmove', function (event) {
 });
 
 setInterval(function () {
-    if (prevEvent && currentEvent) {
-        var speedX = (currentEvent.screenX - prevEvent.screenX) * 10;
-        var speedY = (prevEvent.screenY - currentEvent.screenY) * 10;
+    var speedX = (currentEvent.screenX - prevEvent.screenX) * 10;
+    var speedY = (prevEvent.screenY - currentEvent.screenY) * 10;
 
-        document.getElementById("speedX").innerText = Math.round(speedX);
-        document.getElementById("speedY").innerText = Math.round(speedY);
+    document.getElementById("speedX").innerText = Math.round(speedX);
+    document.getElementById("speedY").innerText = Math.round(speedY);
 
-        document.getElementById("maxSpeedX").innerText = Math.round(
-            speedX > maxSpeedX ? (maxSpeedX = speedX) : maxSpeedX
-        );
+    document.getElementById("maxSpeedX").innerText = Math.round(
+        speedX > maxSpeedX ? (maxSpeedX = speedX) : maxSpeedX
+    );
 
-        document.getElementById("maxSpeedY").innerText = Math.round(
-            speedY > maxSpeedY ? (maxSpeedY = speedY) : maxSpeedY
-        );
+    document.getElementById("maxSpeedY").innerText = Math.round(
+        speedY > maxSpeedY ? (maxSpeedY = speedY) : maxSpeedY
+    );
 
-        if (speedXData.length > 100) {
-            speedXData.shift();
-            speedYData.shift();
-            timeData.shift();
-        }
-
-        speedXData.push(speedX);
-        speedYData.push(speedY);
-        timeData.push(new Date().toLocaleTimeString());
-
-        updateChart();
+    if (speedXData.length > 50) {
+        speedXData.shift();
+        speedYData.shift();
+        timeData.shift();
     }
 
+    speedXData.push(speedX);
+    speedYData.push(speedY);
+    timeData.push(new Date().toLocaleTimeString());
+
+    updateChart();
     prevEvent = currentEvent;
 }, 150);
 
@@ -74,7 +72,7 @@ function updateChart() {
                         fill: false,
                         lineTension: 0.3,
                         fill: "start",
-                        backgroundColor: "rgba(89, 144, 255, 0.05)"
+                        backgroundColor: "rgba(89, 144, 255, 0.05)",
                     },
                 ],
             },
@@ -108,7 +106,7 @@ function updateChart() {
                             display: false,
                         },
                         grid: {
-                            color: "#eaf9ff",
+                            color: "#e0f5ff",
                         },
                         border: {
                             display: false,
