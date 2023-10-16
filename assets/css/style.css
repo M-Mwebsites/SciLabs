@@ -91,7 +91,7 @@ section {
 #header .item a {
     text-transform: uppercase;
     color: #000 !important;
-    font-size: 15px !important;
+    font-size: 22px !important;
     font-style: normal !important;
     font-weight: 700 !important;
     line-height: normal !important;
@@ -109,7 +109,7 @@ section {
 
 #title {
     padding-top: 200px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     position: relative;
     z-index: 2;
     width: fit-content;
@@ -121,7 +121,7 @@ section {
 }
 
 #title div h2 {
-    font-size: 50px;
+    font-size: 60px;
     font-style: normal;
     font-weight: bold;
     line-height: normal;
@@ -199,7 +199,7 @@ section {
 #explain {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.8);
 }
 
 #explain .title {
@@ -242,45 +242,46 @@ section {
     width: 26vw;
 }
 
-
 /*--------------------------------------------------------------
-# About
+# Education
 --------------------------------------------------------------*/
 
-#about {
-    padding-left: 10%;
-    padding-right: 14%;
-    display: flex;
-    padding-top: 220px;
-    justify-content: space-between;
+#education {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: rgba(255,255,255,0.9);
 }
 
-#about h2 {
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 300px;
+#education .title {
+    color: #F0BB74;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 5px;
+    padding: 0 8px;
+    background-color: #f0f0f0;
+    width: fit-content;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
-#about img {
-    width: 128px;
-    height: 8px;
+#education .title-top {
+    margin-top: 5px;
 }
 
-#about video {
-    width: 648px;
+#education .description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 130px;
+}
+
+#education .description .text {
+    font-size: 17px;
+    align-self: center;
+}
+
+#education .description img {
+    width: 160px;
     height: auto;
-}
-
-@media only screen and (max-width: 992px) {
-    #about {
-        flex-direction: column;
-        gap: 40px;
-    }
-    #about video {
-        width: 100%;
-        height: auto;
-    }
+    align-self: center;
 }

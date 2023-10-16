@@ -31,7 +31,7 @@ setInterval(function () {
         speedY > maxSpeedY ? (maxSpeedY = speedY) : maxSpeedY
     );
 
-    if (speedXData.length > 50) {
+    if (speedXData.length > 60) {
         speedXData.shift();
         speedYData.shift();
         timeData.shift();
@@ -58,7 +58,6 @@ function updateChart() {
                         data: speedXData,
                         borderColor: "#f0bb74",
                         borderWidth: 3,
-                        fill: false,
                         lineTension: 0.3,
                         fill: "start",
                         backgroundColor: "rgba(240, 187, 116, 0.05)",
@@ -68,7 +67,6 @@ function updateChart() {
                         data: speedYData,
                         borderColor: "#5990ff",
                         borderWidth: 2,
-                        fill: false,
                         lineTension: 0.3,
                         fill: "start",
                         backgroundColor: "rgba(89, 144, 255, 0.05)",
