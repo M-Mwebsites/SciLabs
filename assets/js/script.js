@@ -259,27 +259,31 @@
 
 })()
 
-// Function to check if an element is at least 2/3 into the viewport
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
-    return rect.top <= windowHeight*(3/4);
+const isTouchDevice = 'ontouchstart' in document.documentElement;
+disableScroll();
+if (!isTouchDevice) smoothScroll();
+window.onresize = () => {
+  resizeBodyHeight();
+};
+window.onload = () => {
+  enableScroll();
+  resizeBodyHeight();
+};
+// Functions
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
 }
-
-
-var app = document.getElementById('typed-text');
-
-var customNodeCreator = function(character) {
-  return document.createTextNode(character);
+function enableScroll() {
+  document.body.style.overflow = '';
 }
-
-var typewriter = new Typewriter(app, {
-  loop: false,
-  delay: 40,
-  onCreateTextNode: customNodeCreator,
-});
-
-typewriter
-  .typeString('We <b>provide data converters</b> for telecommunication, satellite, radar and other applications where extreme performance, high energy efficiency or low-cost (or all of these combined) matter.')
-  .pauseFor(300)
-  .start();
+function smoothScroll() {
+  document.querySelector('.viewport').classList.add('SmoothScroll');
+  new SmoothScroll({
+    target: document.querySelector('.container'),
+    scrollEase: 0.08,
+    maxOffset: 500,
+  });
+}
+function resizeBodyHeight() {
+  document.body.style.height = document.querySelector('.viewport').scrollHeight + 'px';
+}

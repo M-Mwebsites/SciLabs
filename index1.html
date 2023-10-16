@@ -30,6 +30,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/SmoothScroll.min.js"></script>
 
 </head>
 
@@ -41,122 +42,127 @@
         <canvas id="speedChart"></canvas>
     </div>
 
-    <!-- ======= Header ======= -->
-    <header id="header" data-aos="fade-down">
-        <div class="image" id="logo-header">
-            <a href="#"><img src="assets/img/logo.png"></a>
-        </div>
-        <div class="menu">
-            <!-- ozMenu -->
-            <div class="menu-open"><span class="open"></span></div>
-            <div class="ozmenu mt-4">
-                <div class="menu-close"><span class="close"></span></div>
-                <ul class="ozmenu-nav">
-                    <li class="item"><a href="#">Home</a></li>
-                    <li class="item"><a href="#">Eshop</a></li>
-                    <li class="item"><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <!-- ozMenu -->
-        </div>
-    </header>
+    <div class="viewport">
+        <div class="container">
 
-    <!-- ======= Title ======= -->
-    <section id="title" data-aos="fade-down">
-        <div id="logo-title">
-            <img id="logo-title-image" src="assets/img/logo.png">
-            <h2 class="">Transforming<br>physics<br>education</h2>
-        </div>
-    </section>
+            <!-- ======= Header ======= -->
+            <header id="header" data-aos="fade-down">
+                <div class="image" id="logo-header">
+                    <a href="#"><img src="assets/img/logo.png"></a>
+                </div>
+                <div class="menu">
+                    <!-- ozMenu -->
+                    <div class="menu-open"><span class="open"></span></div>
+                    <div class="ozmenu mt-4">
+                        <div class="menu-close"><span class="close"></span></div>
+                        <ul class="ozmenu-nav">
+                            <li class="item"><a href="#">Home</a></li>
+                            <li class="item"><a href="#">Eshop</a></li>
+                            <li class="item"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- ozMenu -->
+                </div>
+            </header>
 
-    <!-- ======= Goals ======= -->
-    <section id="goals">
-        <div class="steps">
-            <div class="step">
-                <p class="number">01.</p>
-                <p class="text">Visualise</p>
-            </div>
-            <div class="step">
-                <p class="number">02.</p>
-                <p class="text">Understand</p>
-            </div>
-            <div class="step">
-                <p class="number">03.</p>
-                <p class="text">Build Intuition</p>
-            </div>
-        </div>
-        <div class="description">
-            <p>Our platform utilizes sensors to capture and display data of quantities in physics, including velocity, acceleration, magnetic fields, pressure, illuminance etc, in real-time. By rendering these invisible quantities into easily comprehensible visuals, our platform simplifies students' understanding and promotes intuitive learning.</p>
-            <p>The first dive into the world of data science at schools! Students can further import measurement data into Python and start acquiring data analytics and visualisation skills.</p>
-        </div>
-    </section>
+            <!-- ======= Title ======= -->
+            <section id="title" data-aos="fade-down">
+                <div id="logo-title">
+                    <img id="logo-title-image" src="assets/img/logo.png">
+                    <h2 class="">Transforming<br>physics<br>education</h2>
+                </div>
+            </section>
 
-    <!-- ======= Explain ======= -->
-    <section id="explain">
-        <p class="title">A better way to teach physics</p>
-        <div class="row">
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">ADVANCED SENSORS</h5>
-                    <p class="description">We use advanced sensors to collect real-time data and create interactive physics experiments for students.</p>
+            <!-- ======= Goals ======= -->
+            <section id="goals">
+                <div class="steps">
+                    <div class="step">
+                        <p class="number">01.</p>
+                        <p class="text">Visualise</p>
+                    </div>
+                    <div class="step">
+                        <p class="number">02.</p>
+                        <p class="text">Understand</p>
+                    </div>
+                    <div class="step">
+                        <p class="number">03.</p>
+                        <p class="text">Build Intuition</p>
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">LEARN VISUALLY</h5>
-                    <p class="description">We use visualisation tools to create interactive animations, simulations and visual representations of physics concepts for an engaging learning experience.</p>
+                <div class="description">
+                    <p>Our platform utilizes sensors to capture and display data of quantities in physics, including velocity, acceleration, magnetic fields, pressure, illuminance etc, in real-time. By rendering these invisible quantities into easily comprehensible visuals, our platform simplifies students' understanding and promotes intuitive learning.</p>
+                    <p>The first dive into the world of data science at schools! Students can further import measurement data into Python and start acquiring data analytics and visualisation skills.</p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">REAL-WORLD DATA</h5>
-                    <p class="description">We use a shared knowledge hub to provide interactive resources, simulations and real-world data to make physics fun.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">PYTHON</h5>
-                    <p class="description">We use Python notebooks to import experimental data and engage students in data handling and analytics.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">ENGAGING SIMULATIONS</h5>
-                    <p class="description">We use exciting games and simulations to make physics learning engaging.</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="">
-                <div class="text">
-                    <h5 class="title">INTERACTIVE EXAMS</h5>
-                    <p class="description">We use interactive exams to create a fun and innovative way to test student’s understanding of physics concepts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <div>
-        <p>Speed X: <span id="speedX"></span></p>
-        <p>Speed Y: <span id="speedY"></span></p>
-        <p>Max Speed X: <span id="maxSpeedX"></span></p>
-        <p>Max Speed Y: <span id="maxSpeedY"></span></p>
+            <!-- ======= Explain ======= -->
+            <section id="explain">
+                <p class="title">A better way to teach physics</p>
+                <div class="row">
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">ADVANCED SENSORS</h5>
+                            <p class="description">We use advanced sensors to collect real-time data and create interactive physics experiments for students.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">LEARN VISUALLY</h5>
+                            <p class="description">We use visualisation tools to create interactive animations, simulations and visual representations of physics concepts for an engaging learning experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">REAL-WORLD DATA</h5>
+                            <p class="description">We use a shared knowledge hub to provide interactive resources, simulations and real-world data to make physics fun.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">PYTHON</h5>
+                            <p class="description">We use Python notebooks to import experimental data and engage students in data handling and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">ENGAGING SIMULATIONS</h5>
+                            <p class="description">We use exciting games and simulations to make physics learning engaging.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="">
+                        <div class="text">
+                            <h5 class="title">INTERACTIVE EXAMS</h5>
+                            <p class="description">We use interactive exams to create a fun and innovative way to test student’s understanding of physics concepts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div>
+                <p>Speed X: <span id="speedX"></span></p>
+                <p>Speed Y: <span id="speedY"></span></p>
+                <p>Max Speed X: <span id="maxSpeedX"></span></p>
+                <p>Max Speed Y: <span id="maxSpeedY"></span></p>
+            </div>
+
+            <!-- ======= Footer ======= -->
+            <footer id="footer" data-aos="fade-up" style="margin-top: 300px; padding-top: 100px;">
+
+            </footer>
+
+            <div style="padding-top: 1000px;"></div>
+        </div>
     </div>
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer" data-aos="fade-up" style="margin-top: 300px; padding-top: 100px;">
-
-    </footer>
-
-    <div style="padding-top: 1000px;"></div>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>

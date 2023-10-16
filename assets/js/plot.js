@@ -13,7 +13,6 @@ function handleInputEvent(event) {
 
 document.documentElement.onmousemove = handleInputEvent;
 document.documentElement.addEventListener('touchmove', function (event) {
-    event.preventDefault();
     handleInputEvent(event.touches[0]);
 });
 
