@@ -91,7 +91,7 @@ section {
 #header .item a {
     text-transform: uppercase;
     color: #000 !important;
-    font-size: 22px !important;
+    font-size: 15px !important;
     font-style: normal !important;
     font-weight: 700 !important;
     line-height: normal !important;
@@ -100,6 +100,16 @@ section {
 #header .menu {
     padding-right: 10%;
     align-self: center;
+}
+
+#header .menu .menu-open .open {
+    margin-right: -10px !important;
+}
+
+@media only screen and (max-width: 992px) {
+    #header .item a {
+        font-size: 22px !important;
+    }
 }
 
 
@@ -128,15 +138,21 @@ section {
 }
 
 @media only screen and (max-width: 992px) {
-    #title {
-        padding-top: 250px;
-        padding-bottom: 50px;
+    #title div h2 {
+        font-size: 50px;
     }
 }
 
 @media only screen and (max-width: 767px) {
+    #title {
+        background: rgba(255,255,255,0.6);
+        width: 100%;
+    }
     #title div img {
-        width: 300px;
+        width: 130px;
+    }
+    #title div h2 {
+        font-size: 40px;
     }
 }
 
@@ -182,12 +198,31 @@ section {
     padding-left: 8px;
     font-size: 18px;
     width: 56vw;
+    padding-right: 8px;
 }
 
 
 @media only screen and (max-width: 992px) {
-    .steps {
+    #goals .steps {
         flex-direction: column;
+        gap: 0px;
+    }
+    #goals .steps .step .text {
+        font-size: 34px;
+    }
+    #goals .description {
+        font-size: 16px;
+        width: 74vw;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #goals .steps .step .text {
+        font-size: 30px;
+    }
+    #goals .description {
+        font-size: 15px;
     }
 }
 
@@ -242,6 +277,37 @@ section {
     width: 26vw;
 }
 
+@media only screen and (max-width: 992px) {
+    #explain .title {
+        font-size: 34px;
+    }
+    #explain .row .title {
+        font-size: 17px;
+    }
+    #explain .row .description {
+        font-size: 16px;
+        width: 32vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #explain .title {
+        font-size: 30px;
+    }
+    #explain .row {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 20px;
+    }
+    #explain .row .title {
+        font-size: 16px;
+    }
+    #explain .row .description {
+        font-size: 15px;
+        width: 52vw;
+    }
+}
+
 /*--------------------------------------------------------------
 # Education
 --------------------------------------------------------------*/
@@ -284,4 +350,26 @@ section {
     width: 160px;
     height: auto;
     align-self: center;
+}
+
+@media only screen and (max-width: 992px) {
+    #education .title {
+        font-size: 34px;
+    }
+    #education .description .text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #education .title {
+        font-size: 30px;
+    }
+    #education .description {
+        flex-direction: column;
+        gap: 20px;
+    }
+    #education .description .text {
+        font-size: 15px;
+    }
 }
