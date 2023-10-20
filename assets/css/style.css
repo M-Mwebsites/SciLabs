@@ -41,7 +41,7 @@ section {
 .chart-wrapper {
     position: fixed;
     height: 500px;
-    width: 106vw;
+    width: 108vw;
     display: flex;
     z-index: -1;
     top: 200px;
@@ -145,8 +145,7 @@ section {
 
 @media only screen and (max-width: 767px) {
     #title {
-        background: rgba(255,255,255,0.6);
-        width: 100%;
+
     }
     #title div img {
         width: 130px;
