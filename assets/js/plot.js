@@ -20,8 +20,8 @@ setInterval(function () {
     var speedX = (currentEvent.screenX - prevEvent.screenX) * 10;
     var speedY = (prevEvent.screenY - currentEvent.screenY) * 10;
 
-    document.getElementById("speedX").innerText = Math.round(speedX);
-    document.getElementById("speedY").innerText = Math.round(speedY);
+    document.getElementById("speedX").innerText = Math.abs(Math.round(speedX));
+    document.getElementById("speedY").innerText = Math.abs(Math.round(speedY));
 
     document.getElementById("maxSpeedX").innerText = Math.round(
         speedX > maxSpeedX ? (maxSpeedX = speedX) : maxSpeedX
@@ -60,7 +60,7 @@ function updateChart() {
                         borderWidth: 3,
                         lineTension: 0.3,
                         fill: "start",
-                        backgroundColor: "rgba(240, 187, 116, 0.05)",
+                        backgroundColor: "rgba(224, 192, 155, 0.05)",
                     },
                     {
                         label: "Speed Y",
@@ -69,7 +69,7 @@ function updateChart() {
                         borderWidth: 2,
                         lineTension: 0.3,
                         fill: "start",
-                        backgroundColor: "rgba(89, 144, 255, 0.05)",
+                        backgroundColor: "rgba(106, 126, 220, 0.05)",
                     },
                 ],
             },

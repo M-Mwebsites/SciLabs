@@ -287,3 +287,28 @@ function smoothScroll() {
 function resizeBodyHeight() {
   document.body.style.height = document.querySelector('.viewport').scrollHeight + 'px';
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Find the "Contact" link by its href attribute
+    const contactLink = document.querySelector('a[href="#footer"]');
+    
+    // Add a click event listener to the link
+    contactLink.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default behavior of the link
+        
+        // Find the target section (in this case, the #footer)
+        const targetSection = document.querySelector(this.getAttribute("href"));
+        
+        if (targetSection) {
+            // Calculate the offset from the top of the page
+            const offset = targetSection.offsetTop;
+            
+            // Scroll to the target section smoothly
+            window.scroll({
+                top: offset,
+                behavior: "smooth"
+            });
+        }
+    });
+});

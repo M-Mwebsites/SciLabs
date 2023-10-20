@@ -163,57 +163,90 @@ section {
 --------------------------------------------------------------*/
 
 #goals {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 150px;
     background-color: rgba(255,255,255,0.7);
 }
 
 #goals .steps {
     display: flex;
-    gap: 70px;
 }
 
 #goals .steps .step {
     width: fit-content;
+    flex: 1;
 }
 
 
 #goals .steps .step .number {
-    color: #DEDEDE;
+    color: black;
     font-size: 24px;
     margin-bottom: 0;
     padding-left: 8px;
 }
 
 #goals .steps .step .text {
-    color: #F0BB74;
+    color: #b9732f;
     font-size: 38px;
     font-weight: 700;
-    margin-top: 5px;
+    margin-top: -5px;
     padding: 0 8px;
-    background-color: #f0f0f0;
+    text-transform: uppercase;
 }
 
 #goals .description {
-    padding-left: 8px;
-    font-size: 18px;
-    width: 56vw;
-    padding-right: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
 }
 
+#goals .description .text {
+    padding-left: 8px;
+    font-size: 18px;
+    padding-right: 80px;
+    flex: 1;
+}
 
-@media only screen and (max-width: 992px) {
+#goals .description .icon {
+    display: flex;
+    flex: 1;
+}
+
+#goals .description .icon img {
+    width: 400px;
+    height: auto;
+    align-self: center;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 1125px) {
     #goals .steps {
         flex-direction: column;
         gap: 0px;
     }
+}
+
+@media only screen and (max-width: 992px) {
     #goals .steps .step .text {
         font-size: 34px;
     }
     #goals .description {
-        font-size: 16px;
-        width: 74vw;
+        flex-direction: column;
         margin-top: 30px;
+    }
+    #goals .description .text {
+        font-size: 16px;
+    }
+    #goals .description .icon img {
+        width: 330px;
+        padding-top: 50px;
+    }
+    #goals .steps .step2 {
+        padding-left: 50px;
+    }
+    #goals .steps .step3 {
+        padding-left: 100px;
     }
 }
 
@@ -222,7 +255,19 @@ section {
         font-size: 30px;
     }
     #goals .description {
+        margin-top: 10px;
+    }
+    #goals .description .text {
         font-size: 15px;
+    }
+    #goals .description .icon img {
+        width: 250px;
+    }
+    #goals .steps .step2 {
+        padding-left: 22px;
+    }
+    #goals .steps .step3 {
+        padding-left: 44px;
     }
 }
 
@@ -238,29 +283,30 @@ section {
 }
 
 #explain .title {
-    color: #80a6f0;
+    color: #4757a5;
     font-size: 38px;
     font-weight: 700;
     margin-top: 5px;
-    padding: 0 8px;
-    background-color: #f0f0f0;
     width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 60px;
 }
 
 #explain .row {
     display: flex;
-    gap: 70px;
-    padding-bottom: 30px;
-    padding-left: 40px;
+    padding-bottom: 70px;
+    gap: 10px;
 }
 
 #explain .row img {
-
+    margin-bottom: 15px;
+    margin-left: 8px;
 }
 
 #explain .row .item {
     padding: 0;
     height: fit-content;
+    flex: 1;
 }
 
 #explain .row .title {
@@ -274,19 +320,23 @@ section {
 #explain .row .description {
     margin: 0;
     font-size: 17px;
-    width: 26vw;
+    width: 260px;
 }
 
 @media only screen and (max-width: 992px) {
     #explain .title {
         font-size: 34px;
     }
+    #explain .row {
+        flex-direction: column;
+        gap: 50px;
+    }
     #explain .row .title {
         font-size: 17px;
     }
     #explain .row .description {
         font-size: 16px;
-        width: 32vw;
+        width: 50vw;
     }
 }
 
@@ -294,17 +344,12 @@ section {
     #explain .title {
         font-size: 30px;
     }
-    #explain .row {
-        flex-direction: column;
-        gap: 30px;
-        padding-left: 20px;
-    }
     #explain .row .title {
         font-size: 16px;
     }
     #explain .row .description {
         font-size: 15px;
-        width: 52vw;
+        width: 70vw;
     }
 }
 
@@ -371,5 +416,43 @@ section {
     }
     #education .description .text {
         font-size: 15px;
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# Speed
+--------------------------------------------------------------*/
+
+.speed {
+    position: absolute;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right;
+    left: 30px;
+    top: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 3;
+    width: max-content;
+}
+
+.speed p {
+    min-width: fit-content;
+}
+
+.speed .x {
+    color: #b9732f;
+}
+
+.speed .y {
+    color: #4757a5;
+}
+
+@media only screen and (max-width: 767px) {
+    .speed {
+        font-size: 11px;
+        top: 50px;
+        left: 12px;
     }
 }

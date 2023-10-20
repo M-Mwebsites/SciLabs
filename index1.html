@@ -54,8 +54,8 @@
                 <div class="menu-close"><span class="close"></span></div>
                 <ul class="ozmenu-nav">
                     <li class="item"><a href="#">Home</a></li>
-                    <li class="item"><a href="#">Eshop</a></li>
-                    <li class="item"><a href="#">Contact</a></li>
+                    <!-- <li class="item"><a href="#">Eshop</a></li> -->
+                    <li class="item"><a href="#footer">Contact</a></li>
                 </ul>
             </div>
             <!-- ozMenu -->
@@ -64,6 +64,16 @@
 
     <div class="viewport">
         <div class="container">
+
+            <!-- ======= Speed ======= -->
+            <div style="position: relative;">
+                <div class="speed">
+                    <p class="x">SPEED X: <span id="speedX"></span> PX/S</p>
+                    <p class="x">TOP SPEED X: <span id="maxSpeedX"></span> PX/S</p>
+                    <p class="y">SPEED Y: <span id="speedY"></span> PX/S</p>
+                    <p class="y">TOP SPEED Y: <span id="maxSpeedY"></span> PX/S</p>
+                </div>
+            </div>
 
             <!-- ======= Title ======= -->
             <section id="title" data-aos="fade-down">
@@ -80,18 +90,23 @@
                         <p class="number">01.</p>
                         <p class="text">Visualise</p>
                     </div>
-                    <div class="step">
+                    <div class="step step2">
                         <p class="number">02.</p>
                         <p class="text">Understand</p>
                     </div>
-                    <div class="step">
+                    <div class="step step3">
                         <p class="number">03.</p>
                         <p class="text">Build Intuition</p>
                     </div>
                 </div>
                 <div class="description">
-                    <p>Our platform utilizes sensors to capture and display data of quantities in physics, including velocity, acceleration, magnetic fields, pressure, illuminance etc, in real-time. By rendering these invisible quantities into easily comprehensible visuals, our platform simplifies students' understanding and promotes intuitive learning.</p>
-                    <p>The first dive into the world of data science at schools! Students can further import measurement data into Python and start acquiring data analytics and visualisation skills.</p>
+                    <div class="text">
+                        <p>Our platform utilizes sensors to capture and display data of quantities in physics, including velocity, acceleration, magnetic fields, pressure, illuminance etc, in real-time. By rendering these invisible quantities into easily comprehensible visuals, our platform simplifies students' understanding and promotes intuitive learning.</p>
+                        <p>The first dive into the world of data science at schools! Students can further import measurement data into Python and start acquiring data analytics and visualisation skills.</p>
+                    </div>
+                    <div class="icon">
+                        <img src="assets/img/goalIcon.png">
+                    </div>
                 </div>
             </section>
 
@@ -100,30 +115,21 @@
                 <p class="title">A better way to teach physics</p>
                 <div class="row">
                     <div class="item">
-                        <img src="">
+                        <img src="assets/img/sensors.svg">
                         <div class="text">
                             <h5 class="title">ADVANCED SENSORS</h5>
                             <p class="description">We use advanced sensors to collect real-time data and create interactive physics experiments for students.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="">
+                        <img src="assets/img/simulations.svg">
                         <div class="text">
-                            <h5 class="title">LEARN VISUALLY</h5>
-                            <p class="description">We use visualisation tools to create interactive animations, simulations and visual representations of physics concepts for an engaging learning experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="item">
-                        <img src="">
-                        <div class="text">
-                            <h5 class="title">REAL-WORLD DATA</h5>
-                            <p class="description">We use a shared knowledge hub to provide interactive resources, simulations and real-world data to make physics fun.</p>
+                            <h5 class="title">ENGAGING SIMULATIONS</h5>
+                            <p class="description">We use exciting games and simulations to make physics learning engaging.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="">
+                        <img src="assets/img/python.svg">
                         <div class="text">
                             <h5 class="title">PYTHON</h5>
                             <p class="description">We use Python notebooks to import experimental data and engage students in data handling and analytics.</p>
@@ -132,14 +138,21 @@
                 </div>
                 <div class="row">
                     <div class="item">
-                        <img src="">
+                        <img src="assets/img/data.svg">
                         <div class="text">
-                            <h5 class="title">ENGAGING SIMULATIONS</h5>
-                            <p class="description">We use exciting games and simulations to make physics learning engaging.</p>
+                            <h5 class="title">REAL-WORLD DATA</h5>
+                            <p class="description">We use a shared knowledge hub to provide interactive resources, simulations and real-world data to make physics fun.</p>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="">
+                        <img src="assets/img/visual.svg">
+                        <div class="text">
+                            <h5 class="title">LEARN VISUALLY</h5>
+                            <p class="description">We use visualisation tools to create interactive animations, simulations and visual representations of physics concepts for an engaging learning experience.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="assets/img/exam.svg">
                         <div class="text">
                             <h5 class="title">INTERACTIVE EXAMS</h5>
                             <p class="description">We use interactive exams to create a fun and innovative way to test student’s understanding of physics concepts.</p>
@@ -158,13 +171,6 @@
                     <img src="assets/img/eduIcon.png">
                 </div>
             </section>
-
-            <div>
-                <p>Speed X: <span id="speedX"></span></p>
-                <p>Speed Y: <span id="speedY"></span></p>
-                <p>Max Speed X: <span id="maxSpeedX"></span></p>
-                <p>Max Speed Y: <span id="maxSpeedY"></span></p>
-            </div>
 
             <!-- ======= Footer ======= -->
             <footer id="footer" data-aos="fade-up" style="margin-top: 100px; padding-top: 100px;">
