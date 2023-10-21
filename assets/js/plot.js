@@ -60,7 +60,7 @@ function updateChart() {
                         borderWidth: 3,
                         lineTension: 0.3,
                         fill: "start",
-                        backgroundColor: "rgba(224, 192, 155, 0.05)",
+                        backgroundColor: "rgba(185, 115, 47, 0.05)",
                     },
                     {
                         label: "Speed Y",
@@ -69,7 +69,7 @@ function updateChart() {
                         borderWidth: 2,
                         lineTension: 0.3,
                         fill: "start",
-                        backgroundColor: "rgba(106, 126, 220, 0.05)",
+                        backgroundColor: "rgba(71, 87, 165, 0.05)",
                     },
                 ],
             },

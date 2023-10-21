@@ -79,7 +79,7 @@ section {
 }
 
 #header .image {
-    padding-left: 10%;
+    padding-left: 9.5%;
     align-self: center;
 }
 
@@ -98,7 +98,7 @@ section {
 }
 
 #header .menu {
-    padding-right: 10%;
+    padding-right: 9.5%;
     align-self: center;
 }
 
@@ -108,7 +108,7 @@ section {
 
 @media only screen and (max-width: 992px) {
     #header .item a {
-        font-size: 22px !important;
+        font-size: 30px !important;
     }
 }
 
@@ -229,6 +229,7 @@ section {
 @media only screen and (max-width: 992px) {
     #goals .steps .step .text {
         font-size: 34px;
+        margin-bottom: 10px;
     }
     #goals .description {
         flex-direction: column;
@@ -239,7 +240,7 @@ section {
     }
     #goals .description .icon img {
         width: 330px;
-        padding-top: 50px;
+        padding-top: 30px;
     }
     #goals .steps .step2 {
         padding-left: 50px;
@@ -250,6 +251,9 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
+    #goals {
+        padding-bottom: 50px;
+    }
     #goals .steps .step .text {
         font-size: 30px;
     }
@@ -258,15 +262,17 @@ section {
     }
     #goals .description .text {
         font-size: 15px;
+        padding-right: 0px;
     }
     #goals .description .icon img {
         width: 250px;
+        margin: 0 auto;
     }
     #goals .steps .step2 {
-        padding-left: 22px;
+        padding-left: 0px;
     }
     #goals .steps .step3 {
-        padding-left: 44px;
+        padding-left: 0px;
     }
 }
 
@@ -329,6 +335,7 @@ section {
     #explain .row {
         flex-direction: column;
         gap: 50px;
+        padding-bottom: 50px;
     }
     #explain .row .title {
         font-size: 17px;
@@ -340,6 +347,9 @@ section {
 }
 
 @media only screen and (max-width: 767px) {
+    #explain {
+        padding-bottom: 0;
+    }
     #explain .title {
         font-size: 30px;
     }
@@ -360,64 +370,184 @@ section {
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: rgba(255,255,255,0.9);
+    display: flex;
+    gap: 15vw;
 }
 
 #education .title {
-    color: #F0BB74;
+    color: #b9732f;
     font-size: 38px;
     font-weight: 700;
-    margin-top: 5px;
-    padding: 0 8px;
-    background-color: #f0f0f0;
-    width: fit-content;
-    margin-top: 0;
-    margin-bottom: 0;
+    text-transform: uppercase;
+    width: 400px;
 }
 
-#education .title-top {
-    margin-top: 5px;
-}
-
-#education .description {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    gap: 130px;
-}
-
-#education .description .text {
-    font-size: 17px;
+#education .text {
+    font-size: 18px;
     align-self: center;
-}
-
-#education .description img {
-    width: 160px;
-    height: auto;
-    align-self: center;
+    width: 500px;
 }
 
 @media only screen and (max-width: 992px) {
     #education .title {
         font-size: 34px;
     }
-    #education .description .text {
+    #education .text {
         font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    #education .title {
-        font-size: 30px;
-    }
-    #education .description {
+    #education {
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 0;
     }
-    #education .description .text {
+    #education .title {
+        font-size: 30px;
+        flex: 1;
+        width: 80vw;
+    }
+    #education .text {
+        font-size: 15px;
+        align-self: normal;
+        flex: 1;
+        width: 80vw;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+
+#team {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    gap: 15vw;
+}
+
+#team .members {
+    display: flex;
+    gap: 40px;
+    flex: 1;
+    align-items: center;
+}
+
+#team .members .member {
+    width: 130px;
+    font-size: 18px;
+}
+
+#team .members .member img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
+#team .members .member .name {
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+#team .members .member .position {
+    margin-top: 0;
+}
+
+#team .description {
+    flex: 1;
+    text-align: right;
+}
+
+#team .description .title {
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+#team .description .text {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+@media only screen and (max-width: 992px) {
+    #team {
+        gap: 6vw;
+    }
+    #team .members .member {
+        font-size: 16px;
+    }
+    #team .description .title {
+        font-size: 34px;
+    }
+    #team .description .text {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #team {
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding-bottom: 0;
+    }
+    #team .members .member {
+        font-size: 15px;
+    }
+    #team .description {
+        text-align: left;
+    }
+    #team .description .title {
+        font-size: 30px;
+    }
+    #team .description .text {
         font-size: 15px;
     }
 }
 
+
+/*--------------------------------------------------------------
+# LinkedIn
+--------------------------------------------------------------*/
+
+#linkedin {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-color: rgba(255,255,255,0.9);
+}
+
+#linkedin img {
+    width: 140px;
+    height: auto;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+#linkedin img:hover {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+#linkedin iframe {
+    border: 1px solid #D9D9D9;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    width: 70%;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 767px) {
+    #linkedin img {
+        width: 120px;
+    }
+    #linkedin iframe {
+        width: 100%;
+    }
+}
 
 
 /*--------------------------------------------------------------
@@ -428,8 +558,8 @@ section {
     position: fixed;
     transform: translateX(-100%) rotate(-90deg);
     transform-origin: right;
-    left: 30px;
-    top: 30px;
+    left: 50px;
+    top: 8vh;
     display: flex;
     gap: 10px;
     z-index: 3;
@@ -449,10 +579,16 @@ section {
     color: #4757a5;
 }
 
+@media only screen and (max-width: 992px) {
+    .speed {
+        left: 30px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .speed {
         font-size: 11px;
         top: 14vh;
-        left: 12px;
+        left: 15px;
     }
 }
