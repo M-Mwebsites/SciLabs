@@ -17,8 +17,8 @@ document.documentElement.addEventListener('touchmove', function (event) {
 });
 
 setInterval(function () {
-    var speedX = (currentEvent.screenX - prevEvent.screenX) * 10;
-    var speedY = (prevEvent.screenY - currentEvent.screenY) * 10;
+    var speedX = (currentEvent.screenX - prevEvent.screenX)*10;
+    var speedY = (prevEvent.screenY - currentEvent.screenY)*10;
 
     document.getElementById("speedX").innerText = Math.abs(Math.round(speedX));
     document.getElementById("speedY").innerText = Math.abs(Math.round(speedY));

@@ -451,7 +451,8 @@ section {
 @media only screen and (max-width: 767px) {
     .speed {
         font-size: 11px;
-        top: 50px;
+        top: 14vh;
         left: 12px;
+        opacity: 0.6;
     }
 }
