@@ -434,6 +434,7 @@ section {
     gap: 10px;
     z-index: 3;
     width: max-content;
+    opacity: 0.6;
 }
 
 .speed p {
@@ -453,6 +454,5 @@ section {
         font-size: 11px;
         top: 14vh;
         left: 12px;
-        opacity: 0.6;
     }
 }
