@@ -425,7 +425,7 @@ section {
 --------------------------------------------------------------*/
 
 .speed {
-    position: absolute;
+    position: fixed;
     transform: translateX(-100%) rotate(-90deg);
     transform-origin: right;
     left: 30px;
