@@ -369,7 +369,7 @@ section {
 #education {
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.8);
     display: flex;
     gap: 15vw;
 }
@@ -424,7 +424,7 @@ section {
 #team {
     padding-top: 100px;
     padding-bottom: 50px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.8);
     display: flex;
     gap: 15vw;
 }
@@ -515,7 +515,7 @@ section {
 #linkedin {
     padding-top: 100px;
     padding-bottom: 50px;
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgba(255,255,255,0.8);
 }
 
 #linkedin img {
@@ -548,6 +548,90 @@ section {
         width: 100%;
     }
 }
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.8);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#footer .description {
+    width: 40vw;
+    font-size: 18px;
+}
+
+#footer .description .title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #4757a5;
+    margin-top: 0;
+}
+
+#footer .description .text {
+    width: 500px;
+}
+
+#footer .description ul {
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+#footer .description ul li a {
+    color: black;
+}
+
+#footer img {
+    width: 100px;
+    margin-right: 30px;
+    align-self: center;
+}
+
+@media only screen and (max-width: 992px) {
+    #footer .description {
+        font-size: 16px;
+    }
+    #footer .description .title {
+        font-size: 34px;
+    }
+    #footer .description .text {
+        width: 400px;
+    }
+    #footer img {
+        width: 70px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #footer {
+        padding-top: 25px;
+        flex-direction: column-reverse;
+        gap: 75px;
+    }
+    #footer .description {
+        font-size: 15px;
+        width: 80vw;
+    }
+    #footer .description .title {
+        font-size: 30px;
+    }
+    #footer .description .text {
+        width: 80vw;
+    }
+    #footer img {
+        width: 70px;
+        height: 200px;
+    }
+}
+
+
 
 
 /*--------------------------------------------------------------

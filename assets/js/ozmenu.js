@@ -38,3 +38,16 @@ for (var i = 0; i < dropDowns.length; i++) {
         });
     }
 }
+
+var menuItems = document.querySelectorAll('.ozmenu-nav .item');
+var mobileMenu = document.getElementById('menu-mobile');
+
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            document.body.classList.toggle("hide-scrolling");
+            document.body.classList.toggle("mobile-menu-active");
+        }
+    });
+});
