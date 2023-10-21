@@ -43,7 +43,7 @@ setInterval(function () {
 
     updateChart();
     prevEvent = currentEvent;
-}, 500);
+}, 200);
 
 function updateChart() {
     if (!chart) {

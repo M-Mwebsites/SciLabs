@@ -41,7 +41,7 @@ section {
 .chart-wrapper {
     position: fixed;
     height: 500px;
-    width: 108vw;
+    width: 107vw;
     display: flex;
     z-index: -1;
     top: 200px;
