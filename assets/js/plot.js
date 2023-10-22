@@ -56,7 +56,7 @@ function updateChart() {
                     {
                         label: "Speed X",
                         data: speedXData,
-                        borderColor: "#f0bb74",
+                        borderColor: "#b9732f",
                         borderWidth: 3,
                         lineTension: 0.3,
                         fill: "start",
@@ -65,7 +65,7 @@ function updateChart() {
                     {
                         label: "Speed Y",
                         data: speedYData,
-                        borderColor: "#5990ff",
+                        borderColor: "#4757a5",
                         borderWidth: 2,
                         lineTension: 0.3,
                         fill: "start",

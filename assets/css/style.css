@@ -145,7 +145,8 @@ section {
 
 @media only screen and (max-width: 767px) {
     #title {
-
+        width: initial;
+        background: rgba(255,255,255,0.6);
     }
     #title div img {
         width: 130px;
