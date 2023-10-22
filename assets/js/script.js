@@ -304,3 +304,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+//summer/winter time masses
+var dateObj = new Date();
+var m = dateObj.getUTCMonth(); //months from 0-11
+var d = dateObj.getUTCDate();
+var y = dateObj.getUTCFullYear();
+
+//footer year change
+document.getElementById("footerYear").innerText = y;

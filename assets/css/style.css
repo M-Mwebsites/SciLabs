@@ -579,19 +579,36 @@ section {
     width: 500px;
 }
 
-#footer .description ul {
-    padding-top: 40px;
-    padding-left: 30px;
+#footer .description .place, #footer .description .mail {
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+    padding-top: 10px;
 }
 
-#footer .description ul li a {
+#footer .description .place span {
+    align-self: end;
+}
+
+#footer .description .mail a {
     color: black;
+    align-self: center;
+    transition: 0.3s;
 }
 
-#footer img {
-    width: 100px;
-    margin-right: 30px;
-    align-self: center;
+#footer .description .mail a:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+#footer .made {
+    align-self: flex-end;
+    margin-bottom: 0;
+}
+
+#footer .made .name {
+    color: #b9732f;
+    font-weight: 700;
 }
 
 @media only screen and (max-width: 992px) {
@@ -604,17 +621,13 @@ section {
     #footer .description .text {
         width: 400px;
     }
-    #footer img {
-        width: 70px;
-        height: 200px;
-    }
 }
 
 @media only screen and (max-width: 767px) {
     #footer {
         padding-top: 25px;
-        flex-direction: column-reverse;
-        gap: 75px;
+        flex-direction: column;
+        gap: 40px;
     }
     #footer .description {
         font-size: 15px;
@@ -626,9 +639,8 @@ section {
     #footer .description .text {
         width: 80vw;
     }
-    #footer img {
-        width: 70px;
-        height: 200px;
+    #footer .made {
+        align-self: flex-start;
     }
 }
 
@@ -650,6 +662,7 @@ section {
     z-index: 3;
     width: max-content;
     opacity: 0.6;
+    font-weight: 700;
 }
 
 .speed p {

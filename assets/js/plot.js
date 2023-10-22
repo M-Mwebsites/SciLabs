@@ -57,7 +57,7 @@ function updateChart() {
                         label: "Speed X",
                         data: speedXData,
                         borderColor: "#b9732f",
-                        borderWidth: 3,
+                        borderWidth: 2,
                         lineTension: 0.3,
                         fill: "start",
                         backgroundColor: "rgba(185, 115, 47, 0.05)",
