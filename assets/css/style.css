@@ -243,6 +243,9 @@ section {
         width: 330px;
         padding-top: 30px;
     }
+    #goals .steps .step .number {
+        font-size: 22px;
+    }
     #goals .steps .step2 {
         padding-left: 50px;
     }
@@ -268,6 +271,9 @@ section {
     #goals .description .icon img {
         width: 250px;
         margin: 0 auto;
+    }
+    #goals .steps .step .number {
+        font-size: 20px;
     }
     #goals .steps .step2 {
         padding-left: 0px;
@@ -663,6 +669,7 @@ section {
     width: max-content;
     opacity: 0.6;
     font-weight: 700;
+    font-size: 13px;
 }
 
 .speed p {
