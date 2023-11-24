@@ -56,10 +56,10 @@ function updateChart() {
                     {
                         label: "Speed X",
                         data: speedXData,
-                        borderColor: "#b9732f",
+                        borderColor: "#B0B0B0",
                         borderWidth: 2,
                         lineTension: 0.3,
-                        fill: "start",
+                        // fill: "start",
                         backgroundColor: "rgba(185, 115, 47, 0.05)",
                     },
                     {
@@ -68,7 +68,7 @@ function updateChart() {
                         borderColor: "#4757a5",
                         borderWidth: 2,
                         lineTension: 0.3,
-                        fill: "start",
+                        // fill: "start",
                         backgroundColor: "rgba(71, 87, 165, 0.05)",
                     },
                 ],

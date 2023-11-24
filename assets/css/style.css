@@ -93,7 +93,7 @@ section {
     color: #000 !important;
     font-size: 15px !important;
     font-style: normal !important;
-    font-weight: 700 !important;
+    font-weight: 900 !important;
     line-height: normal !important;
 }
 
@@ -178,20 +178,17 @@ section {
 }
 
 
-#goals .steps .step .number {
-    color: black;
-    font-size: 24px;
-    margin-bottom: 0;
+#goals .steps .step img {
+    width: 100px;
     padding-left: 8px;
 }
 
 #goals .steps .step .text {
-    color: #b9732f;
+    color: #B0B0B0;
     font-size: 38px;
     font-weight: 700;
     margin-top: -5px;
     padding: 0 8px;
-    text-transform: uppercase;
 }
 
 #goals .description {
@@ -230,7 +227,6 @@ section {
 @media only screen and (max-width: 992px) {
     #goals .steps .step .text {
         font-size: 34px;
-        margin-bottom: 10px;
     }
     #goals .description {
         flex-direction: column;
@@ -243,15 +239,6 @@ section {
         width: 330px;
         padding-top: 30px;
     }
-    #goals .steps .step .number {
-        font-size: 22px;
-    }
-    #goals .steps .step2 {
-        padding-left: 50px;
-    }
-    #goals .steps .step3 {
-        padding-left: 100px;
-    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -260,6 +247,7 @@ section {
     }
     #goals .steps .step .text {
         font-size: 30px;
+        margin-bottom: 40px;
     }
     #goals .description {
         margin-top: 10px;
@@ -272,14 +260,8 @@ section {
         width: 250px;
         margin: 0 auto;
     }
-    #goals .steps .step .number {
-        font-size: 20px;
-    }
-    #goals .steps .step2 {
-        padding-left: 0px;
-    }
-    #goals .steps .step3 {
-        padding-left: 0px;
+    #goals .steps .step img {
+        width: 75px;
     }
 }
 
@@ -295,12 +277,11 @@ section {
 }
 
 #explain .title {
-    color: #4757a5;
+    color: black;
     font-size: 38px;
     font-weight: 700;
     margin-top: 5px;
     width: fit-content;
-    text-transform: uppercase;
     margin-bottom: 60px;
 }
 
@@ -323,10 +304,11 @@ section {
 
 #explain .row .title {
     background-color: transparent;
-    color: black;
+    color: #4757A5;
     font-size: 18px;
     padding: 0;
     margin: 0;
+    margin-bottom: 10px;
 }
 
 #explain .row .description {
@@ -382,11 +364,10 @@ section {
 }
 
 #education .title {
-    color: #b9732f;
+    color: #B0B0B0;
     font-size: 38px;
     font-weight: 700;
-    text-transform: uppercase;
-    width: 400px;
+    width: 450px;
 }
 
 #education .text {
@@ -613,7 +594,7 @@ section {
 }
 
 #footer .made .name {
-    color: #b9732f;
+    color: #B0B0B0;
     font-weight: 700;
 }
 
@@ -667,7 +648,7 @@ section {
     gap: 10px;
     z-index: 3;
     width: max-content;
-    opacity: 0.6;
+    opacity: 1;
     font-weight: 700;
     font-size: 13px;
 }
@@ -677,7 +658,7 @@ section {
 }
 
 .speed .x {
-    color: #b9732f;
+    color: #B0B0B0;
 }
 
 .speed .y {
