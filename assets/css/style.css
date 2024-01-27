@@ -260,7 +260,7 @@ header {
 #goals .description .text {
     padding-left: 8px;
     font-size: 18px;
-    padding-right: 80px;
+    padding-right: 10vw;
     flex: 1;
 }
 
