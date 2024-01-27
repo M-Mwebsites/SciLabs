@@ -11,15 +11,16 @@ html {
 }
   
 .container {
-    width: 100vw;
+    width: 96vw;
+    border-left: 2vw solid #4757a5;
+    border-right: 2vw solid #4757a5;
 }
 
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: white !important;
     color: black;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 0;
 }
 
 .show {
@@ -63,19 +64,30 @@ section {
     width: 100% !important;
 }
 
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 
+header {
+    height: 4vh;
+    z-index: 1000;
+    background-color: #4757a5;
+    position: fixed;
+    top: 0;
+    border: 2vw solid #4757a5;
+    border-bottom: none;
+    width: 96vw;
+}
+
 #header {
     display: flex;
     justify-content: space-between;
-    height: 8vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
     background-color: white;
+    border: 2vw solid white;
+    border-radius: 2vw 2vw 0 0;
+    height: 2vw;
 }
 
 #header .image {
@@ -95,6 +107,7 @@ section {
     font-style: normal !important;
     font-weight: 900 !important;
     line-height: normal !important;
+    text-decoration: none;
 }
 
 #header .menu {
@@ -106,12 +119,59 @@ section {
     margin-right: -10px !important;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 767px) {
     #header .item a {
         font-size: 30px !important;
     }
 }
 
+
+
+/*  PAGE BORDERS  */
+@media only screen and (max-width: 992px) {
+    .container {
+        width: 94vw;
+        border-left: 3vw solid #4757a5;
+        border-right: 3vw solid #4757a5;
+    }
+    header {
+        border: 3vw solid #4757a5;
+        width: 94vw;
+    }
+    #header {
+        border: 3vw solid white;
+        height: 3vw;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        width: 100vw;
+        border: none;
+    }
+    header {
+        border: none;
+        border-top: 2vw solid #4757a5;
+        width: 100vw;
+        height: 8vw;
+        background-color: white;
+    }
+    #header {
+        border: none;
+        background-color: white;
+        height: 8vw;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    header {
+        height: 14vw;
+    }
+    #header {
+        height: 14vw;
+    }
+}
 
 /*--------------------------------------------------------------
 # Title
@@ -122,8 +182,7 @@ section {
     padding-bottom: 70px;
     position: relative;
     z-index: 2;
-    width: fit-content;
-    background: linear-gradient(to right, rgba(255,255,255,0.7) 90%, transparent);
+    background: linear-gradient(to right, rgba(255,255,255,0.7) 20%, transparent);
 }
 
 #title div img {
@@ -164,7 +223,7 @@ section {
 
 #goals {
     padding-top: 100px;
-    padding-bottom: 150px;
+    padding-bottom: 100px;
     background-color: rgba(255,255,255,0.7);
 }
 
@@ -203,6 +262,14 @@ section {
     font-size: 18px;
     padding-right: 80px;
     flex: 1;
+}
+
+#goals .description .text .title {
+    color: black;
+    font-size: 38px;
+    font-weight: 700;
+    margin-top: 5px;
+    width: fit-content;
 }
 
 #goals .description .icon {
@@ -368,6 +435,11 @@ section {
     font-size: 38px;
     font-weight: 700;
     width: 450px;
+}
+
+#education .title img {
+    width: 70px;
+    padding-top: 20px;
 }
 
 #education .text {
@@ -638,6 +710,11 @@ section {
 # Speed
 --------------------------------------------------------------*/
 
+.speedWrapper {
+    position: fixed;
+    z-index: 3;
+}
+
 .speed {
     position: fixed;
     transform: translateX(-100%) rotate(-90deg);
@@ -646,7 +723,6 @@ section {
     top: 8vh;
     display: flex;
     gap: 10px;
-    z-index: 3;
     width: max-content;
     opacity: 1;
     font-weight: 700;
@@ -667,7 +743,7 @@ section {
 
 @media only screen and (max-width: 992px) {
     .speed {
-        left: 30px;
+        left: 40px;
     }
 }
 

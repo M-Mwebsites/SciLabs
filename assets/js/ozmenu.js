@@ -10,6 +10,7 @@ const menuDiv = document.querySelector(".ozmenu");
 const menu = document.querySelector(".ozmenu-nav");
 const dropDowns = menu.getElementsByClassName("nav-dropdown");
 const dropDownsChild = menu.querySelectorAll('.dropdown .nav-dropdown');
+var speed = document.getElementById('speed');
 
 openMenu.addEventListener("click", menuToggle);
 closeMenu.addEventListener("click", menuToggle);
@@ -22,6 +23,11 @@ function menuToggle() {
     document.body.classList.toggle("hide-scrolling");
     document.body.classList.toggle("mobile-menu-active");
     document.getElementById("menu-overlay").classList.toggle("show");
+    if (speed.classList.contains('speedWrapper')) {
+        speed.classList.remove('speedWrapper');
+    } else {
+        speed.classList.add('speedWrapper');
+    }
 }
 
 for (var i = 0; i < dropDownsChild.length; i++) {
@@ -48,6 +54,7 @@ menuItems.forEach(function (item) {
             mobileMenu.classList.remove('active');
             document.body.classList.toggle("hide-scrolling");
             document.body.classList.toggle("mobile-menu-active");
+            speed.classList.add('speedWrapper');
         }
     });
 });

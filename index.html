@@ -42,28 +42,8 @@
         <canvas id="speedChart"></canvas>
     </div>
 
-    <!-- ======= Header ======= -->
-    <header id="header" data-aos="fade-down">
-        <div class="image" id="logo-header">
-            <a href="#"><img src="assets/img/logo.png"></a>
-        </div>
-        <div class="menu">
-            <!-- ozMenu -->
-            <div class="menu-open"><span class="open"></span></div>
-            <div id="menu-mobile" class="ozmenu mt-4">
-                <div class="menu-close"><span class="close"></span></div>
-                <ul class="ozmenu-nav">
-                    <li class="item"><a href="#">Home</a></li>
-                    <li class="item"><a href="#">Eshop</a></li>
-                    <li class="item"><a href="#footer">Contact</a></li>
-                </ul>
-            </div>
-            <!-- ozMenu -->
-        </div>
-    </header>
-
     <!-- ======= Speed ======= -->
-    <div style="position: fixed; z-index: 3;" data-aos="fade-right">
+    <div id="speed" class="speedWrapper" data-aos="fade-right">
         <div class="speed">
             <p class="x">SPEED X: <span id="speedX"></span> PX/S</p>
             <p class="x">TOP SPEED X: <span id="maxSpeedX"></span> PX/S</p>
@@ -73,6 +53,29 @@
     </div>
 
     <div class="viewport">
+
+        <!-- ======= Header ======= -->
+        <header data-aos="fade-down">
+            <div id="header">
+                <div class="image" id="logo-header">
+                    <a href="#"><img src="assets/img/logo.png"></a>
+                </div>
+                <div class="menu">
+                    <!-- ozMenu -->
+                    <div class="menu-open"><span class="open"></span></div>
+                    <div id="menu-mobile" class="ozmenu mt-4">
+                        <div class="menu-close"><span class="close"></span></div>
+                        <ul class="ozmenu-nav">
+                            <li class="item"><a href="#">Home</a></li>
+                            <li class="item"><a href="https://scilabs.myshopify.com/">Eshop</a></li>
+                            <li class="item"><a href="#footer">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- ozMenu -->
+                </div>
+            </div>
+        </header>
+
         <div class="container">
 
             <!-- ======= Title ======= -->
@@ -101,11 +104,11 @@
                 </div>
                 <div class="description">
                     <div class="text">
-                        <p><b>Our platform</b> utilizes sensors to capture and display data of quantities in physics, including velocity, acceleration, magnetic fields, pressure, illuminance etc, in real-time. <b>By rendering these invisible quantities into easily comprehensible visuals</b>, our platform simplifies students' understanding and promotes intuitive learning.</p>
-                        <p><b>The first dive into the world of data science at schools!</b> Students can further import measurement data into Python and start acquiring data analytics and visualisation skills.</p>
+                        <p class="title">The first dive into the<br>world of data at schools!</p>
+                        <p><b>Our platform utilizes bluetooth sensors</b> to measure and display data of physics quantities in real-time. Easily comprehensible visuals simplifies students' understanding and promotes intuitive learning. Students can further import measurement data into Python or Excel and start acquiring data analytics and visualisation skills.</p>
                     </div>
                     <div class="icon">
-                        <img src="assets/img/goalIcon.png">
+                        <img src="assets/img/goalIcon2.png">
                     </div>
                 </div>
             </section>
@@ -163,7 +166,7 @@
 
             <!-- ======= Education ======= -->
             <section id="education">
-                <p class="title">Transforming Education,<br>One Interactive Physics Experiment At A Time</p>
+                <p class="title">Transforming Education,<br>One Interactive Physics Experiment At A Time<br><img src="assets/img/eduicon.png"></p>
                 <p class="text"><b>Our mission</b> is to revolutionize the way students learn physics by harnessing the power of interactive technology and visual aids. We believe that every student deserves <b>an engaging and fun learning experience</b>, and we’re committed to providing that through our innovative approach. By fostering a love for physics in students, we aim to <b>inspire a new generation</b> of scientists, engineers, and innovators who will shape the world of tomorrow. Join us in our mission to make physics education fun, engaging, and accessible for all.</p>
             </section>
 
